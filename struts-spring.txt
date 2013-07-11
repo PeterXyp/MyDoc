@@ -1,0 +1,52 @@
+                 |
+                 |	      		|Action*
+                 |--CompoundRoot root---|
+                 |	      		|TextProvider
+                 |
+                 |
+		 |
+                 |	      |--root
+                 |	      |
+OgnlValueStack---|	      |--VALUE_STACK
+                 |	      |
+                 |--context---|--ActionContext.CONTAINER
+                 |	      |
+		 |	      |--requestMap,parameterMap,sessionMap,applicationMap,attr
+                 |	      |
+		 |	      |--locale,request,response,servletContext
+                 |
+                 |
+                 |		  |--setValue(String expr, Object value)
+                 |--Expressions---|
+                 |		  |--findValue(String expr, Class asType)
+
+
+		|OgnlValueStack.context
+		|	
+AtionContext---	|
+		|
+		|ActionInvocation
+
+
+ActionProxy ActionInvocation
+
+ActionInvocation invoke()
+excute order...
+InterceptorA
+ InterceptorB
+  InterceptorC
+   Action
+  InterceptorC
+ InterceptorB
+InterceptorA
+
+
+Spring bean life cycle
+-- setProperty : Dependent Injection
+-- setting bean name : BeanNameAware
+-- setting BeanFactory : BeanFactoryAware
+-- postProcessBeforeInitialization
+-- afterPropertiesSet InitializingBean 
+-- initMethod defines in xml
+-- postProcessAfterInitialization
+
