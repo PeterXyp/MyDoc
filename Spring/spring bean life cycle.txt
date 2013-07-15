@@ -1,0 +1,8 @@
+Spring bean life cycle
+-- setProperty : Dependent Injection
+-- setting bean name : BeanNameAware
+-- setting BeanFactory : BeanFactoryAware
+-- postProcessBeforeInitialization
+-- afterPropertiesSet InitializingBean 
+-- initMethod defines in xml
+-- postProcessAfterInitialization
